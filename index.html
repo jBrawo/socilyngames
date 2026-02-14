@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socilyn Games - Resmi Web Sitesi</title>
+    <style>
+        :root {
+            --primary: #ffcc00; /* Traktör Sarısı */
+            --dark: #121212;
+            --light: #ffffff;
+            --gray: #2d2d2d;
+            --accent: #ff9900;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+        }
+        /* Header / Banner */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1625246333195-58197bd4773d?q=80&w=1920&auto=format&fit=crop'); 
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+        }
+        p.tagline {
+            font-size: 1.5rem;
+            margin-top: 10px;
+            color: #ddd;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: #000;
+            padding: 12px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: 30px;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3);
+        }
+        .btn:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 204, 0, 0.5);
+        }
+
+        /* Container & Sections */
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+        .section {
+            padding: 60px 0;
+            border-bottom: 1px solid #333;
+        }
+        h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            border-left: 5px solid var(--primary);
+            padding-left: 15px;
+            margin-bottom: 30px;
+        }
+
+        /* Game Card Styling */
+        .game-card {
+            background: var(--gray);
+            border-radius: 15px;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            transition: transform 0.3s;
+        }
+        .game-card:hover {
+            transform: translateY(-5px);
+        }
+        .game-img {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+        .game-img img {
+             width: 100%;
+             height: 100%;
+             object-fit: cover;
+             display: block;
+        }
+        .game-info {
+            flex: 1;
+            padding: 40px;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .game-info h3 { margin-top: 0; font-size: 2rem; color: #fff; }
+        .game-info ul { list-style: none; padding: 0; }
+        .game-info li { padding: 5px 0; border-bottom: 1px solid #444; }
+        .game-info li:before { content: "✅ "; }
+
+        /* Privacy Policy Box */
+        .privacy-box {
+            background: #1e1e1e;
+            padding: 25px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            height: 300px;
+            overflow-y: scroll;
+            border: 1px solid #333;
+            color: #ccc;
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 50px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        /* Mobile */
+        @media(max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            header { height: 50vh; }
+            .game-card { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Socilyn Games</h1>
+        <p class="tagline">Next Generation Simulation Experience</p>
+        <a href="#games" class="btn">Oyunları Gör</a>
+    </header>
+
+    <div class="container">
+        
+        <!-- HAKKIMIZDA -->
+        <section id="about" class="section">
+            <h2>Hakkımızda</h2>
+            <p style="font-size: 1.1rem; max-width: 800px;">
+                Biz simülasyon oyunlarına tutkun, detaylara önem veren bağımsız bir oyun geliştirme ekibiyiz. 
+                Amacımız mobil platformlarda en gerçekçi ve keyifli çiftçilik ve araç simülasyon deneyimini sunmaktır.
+                Unity 6 teknolojisi ile geliştirdiğimiz oyunlarımızla, oyunculara sadece bir oyun değil, yaşayan bir dünya sunuyoruz.
+            </p>
+        </section>
+
+        <!-- OYUNLAR -->
+        <section id="games" class="section">
+            <h2>Projelerimiz</h2>
+            
+            <div class="game-card">
+                <div class="game-img">
+                    <!-- Buraya kendi oyununun ekran görüntüsünü koyabilirsin -->
+                    <img src="https://images.unsplash.com/photo-1592861956120-e524fc739696?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Tractor Game">
+                </div>
+                <div class="game-info">
+                    <h3>Real Tractor Farm Simulator 2026</h3>
+                    <p>Gerçekçi fizik motoru, detaylı grafikler ve sürükleyici bir çiftçilik deneyimi. 
+                    Tarlaları sür, ekinleri biç ve kendi çiftlik imparatorluğunu kur.</p>
+                    <ul>
+                        <li>🚜 Gelişmiş Araç Fiziği & Süspansiyon</li>
+                        <li>🌾 Geniş Açık Dünya Haritası</li>
+                        <li>🎮 Optimize Edilmiş Kontroller</li>
+                        <li>📱 Android 15 & Unity 6 Desteği</li>
+                    </ul>
+                    <a href="#" class="btn" style="background: #00e676; color: #fff;">Google Play'de İndir</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- GİZLİLİK POLİTİKASI (ZORUNLU) -->
+        <section id="privacy" class="section">
+            <h2>Gizlilik Politikası (Privacy Policy)</h2>
+            <p>Google Play Store gerekliliklerine uygun resmi gizlilik politikamız:</p>
+            <div class="privacy-box">
+                <h3>Privacy Policy for Real Tractor Farm Simulator 2026</h3>
+                <p><strong>Effective Date: February 14, 2026</strong></p>
+                <p>Socilyn Games built the Real Tractor Farm Simulator 2026 app as a Free app. This SERVICE is provided by Socilyn Games at no cost and is intended for use as is.</p>
+                
+                <h4>Information Collection and Use</h4>
+                <p>For a better experience, while using our Service, I may require you to provide us with certain personally identifiable information. The information that I request will be retained on your device and is not collected by me in any way.</p>
+                <p>The app does use third party services that may collect information used to identify you. Link to privacy policy of third party service providers used by the app:</p>
+                <ul>
+                    <li><a href="https://www.google.com/policies/privacy/" target="_blank">Google Play Services</a></li>
+                    <li><a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank">AdMob</a></li>
+                    <li><a href="https://firebase.google.com/policies/analytics" target="_blank">Google Analytics for Firebase</a></li>
+                </ul>
+
+                <h4>Log Data</h4>
+                <p>I want to inform you that whenever you use my Service, in a case of an error in the app I collect data and information (through third party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing my Service, the time and date of your use of the Service, and other statistics.</p>
+
+                <h4>Changes to This Privacy Policy</h4>
+                <p>I may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. I will notify you of any changes by posting the new Privacy Policy on this page.</p>
+
+                <h4>Contact Us</h4>
+                <p>If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact me at: support@socilyngames.com</p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Socilyn Games. Tüm hakları saklıdır.</p>
+        <p>Built with ❤️ for Gamers</p>
+    </footer>
+
+</body>
+</html>
+
